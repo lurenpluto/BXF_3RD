@@ -13,6 +13,8 @@ public:
     wxImage(wxImage& image);
     ~wxImage(void);
 
+    wxImage& operator =(wxImage& image);
+
     void Create(int width, int height);
     void Create(const unsigned char* buffer, int width, int height);
     void InitAlpha();
@@ -30,5 +32,4 @@ private:
     XL_BITMAP_HANDLE m_hBitmapHandle;
     int m_width;
     int m_height;
-    unsigned char* m_buffer;
 };
